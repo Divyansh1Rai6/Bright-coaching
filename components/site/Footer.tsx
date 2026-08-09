@@ -18,7 +18,6 @@ import { siteConfig, navLinks } from '@/lib/data';
 export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* CTA banner */}
       <div className="border-b border-white/10">
         <div className="container mx-auto px-4 py-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
@@ -37,7 +36,7 @@ export default function Footer() {
               >
                 Book Free Demo
               </Link>
-              
+              <a
                 href={`tel:${siteConfig.phone}`}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all"
               >
@@ -49,10 +48,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
@@ -78,7 +75,7 @@ export default function Footer() {
                 { icon: Youtube, href: siteConfig.social.youtube, label: 'YouTube' },
                 { icon: Twitter, href: siteConfig.social.twitter, label: 'Twitter' },
               ].map((social) => (
-                
+                <a
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
@@ -90,7 +87,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
@@ -107,7 +103,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Popular courses */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-4">Our Courses</h4>
             <ul className="space-y-2.5">
@@ -131,7 +126,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-4">Get in Touch</h4>
             <ul className="space-y-3">
@@ -142,7 +136,7 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                
+                <a
                   href={`tel:${siteConfig.phone}`}
                   className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-secondary transition-colors"
                 >
@@ -151,7 +145,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                
+                <a
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-secondary transition-colors"
                 >
@@ -168,7 +162,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-5">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
