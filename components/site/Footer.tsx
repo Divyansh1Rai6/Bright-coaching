@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import {
   GraduationCap,
@@ -9,6 +11,7 @@ import {
   Youtube,
   Twitter,
   Clock,
+  Heart,
 } from 'lucide-react';
 import { siteConfig, navLinks } from '@/lib/data';
 
@@ -34,7 +37,7 @@ export default function Footer() {
               >
                 Book Free Demo
               </Link>
-              <a
+              
                 href={`tel:${siteConfig.phone}`}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all"
               >
@@ -75,7 +78,7 @@ export default function Footer() {
                 { icon: Youtube, href: siteConfig.social.youtube, label: 'YouTube' },
                 { icon: Twitter, href: siteConfig.social.twitter, label: 'Twitter' },
               ].map((social) => (
-                <a
+                
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
@@ -139,7 +142,7 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <a
+                
                   href={`tel:${siteConfig.phone}`}
                   className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-secondary transition-colors"
                 >
@@ -148,7 +151,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
+                
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-secondary transition-colors"
                 >
@@ -168,12 +171,14 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-5">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="flex flex-col items-center justify-center gap-2 text-center">
             <p className="text-xs text-primary-foreground/50">
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
-            <p className="text-xs text-primary-foreground/50">
-              Made with dedication in Indore, Madhya Pradesh
+            <p className="text-xs text-primary-foreground/50 flex items-center justify-center gap-1">
+              Made with{' '}
+              <Heart className="h-3.5 w-3.5 fill-red-500 text-red-500 animate-pulse" />{' '}
+              by Creyotech
             </p>
           </div>
         </div>
